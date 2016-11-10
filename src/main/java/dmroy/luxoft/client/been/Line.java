@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 @XmlRootElement(name = "line")
 @XmlAccessorType(value = XmlAccessType.FIELD)
-public class Line implements Serializable{
+public class Line {
     private long fileId;
     private String fileName;
     private int lineNumber;
