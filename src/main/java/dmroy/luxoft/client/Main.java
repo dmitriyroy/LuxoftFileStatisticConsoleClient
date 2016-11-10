@@ -10,7 +10,6 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.text.BadLocationException;
 import static org.springframework.context.i18n.LocaleContextHolder.setLocale;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
  *
@@ -18,16 +17,14 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
  */
 public class Main {
 
-
     public static String SERVER_URL;
-//    public static FileStatisticDao fileStatisticDao;
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
 
         SERVER_URL = "http://localhost:8080/luxoft-web";
-//        http://localhost:8080/luxoft-web/allFiles
 
         new ClassPathXmlApplicationContext("beans.xml");
 
@@ -38,13 +35,8 @@ public class Main {
 
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 
-            //new InitOrderTable().run();
-            //new InitCakeTable().run();
             new InitMainFrame().run();
-            //new InitCustomersTable().run();
 
-//            Thread thread1 = new Thread (new UpdateTables());
-//            thread1.start();
         }
             catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException e) {
         }
